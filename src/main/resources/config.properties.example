@@ -1,0 +1,33 @@
+# Medeo environment configuration
+medeo.idp.url=
+medeo.rails.url=
+medeo.client_id=
+medeo.client_secret=
+medeo.jwt_key=
+
+# Registry environment configuration
+registry.url=
+registry.key=
+
+# sets how often AccuroAPI should contact registry to update our copy of scopes and client_details
+registry.refresh.cron=0 0 0 * * *
+
+# Enables document cloud storage. Default false.
+accblob.enabled=
+
+azure.blob.endpoint=https://%s.blob.core.windows.net
+azure.blob.vault-name=
+
+# Master keyvault credentials
+keyvault.tenant-id=
+keyvault.client-secret=
+keyvault.client-id=
+
+# Discovery service configuration
+discovery.url=
+
+# cloud storage details (optional single tenant mode only)
+
+#single.discovery.storage_account=
+#single.discovery.container_name=
+

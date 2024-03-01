@@ -1,0 +1,38 @@
+# Driver name to be used for all databases
+jdbc.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+# In single tenant setups this should reference the Accuro/MedAdmin database
+# In multi-tenant setups this should reference the Tenant database
+jdbc.url=jdbc:sqlserver://{{server}}:{{port}};databaseName={{name}}
+jdbc.username=
+jdbc.password=
+
+# To provide document access Accuro API will need access to the accdocs database
+accdocs.jdbc.url=jdbc:sqlserver://{{server}}:{{port}};databaseName={{name}}
+accdocs.jdbc.username=
+accdocs.jdbc.password=
+
+# Until such time that the authentication server is seperate from Accuro API
+# Accuro API will need to access an authentication database
+oauth.jdbc.url=jdbc:sqlserver://{{server}}:{{port}};databaseName={{name}}
+oauth.jdbc.username=
+oauth.jdbc.password=
+
+# Accuro API will need to access an tokenstore database
+token-store.jdbc.url=jdbc:sqlserver://{{server}}:{{port}};databaseName={{name}}
+token-store.jdbc.username=
+token-store.jdbc.password=
+
+# Multi-tenancy configuration
+tenants.type=
+
+# Authentication Credentials
+registry.url.token=
+registry.client_id=
+registry.client_secret=
+
+# do not refresh oauth_client_details
+oauth.nofetch=
+
+# the per acron rate limit in ms for calls to get datasource details
+datasource.details.rate-limit=

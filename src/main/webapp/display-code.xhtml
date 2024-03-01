@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml" layout:decorator="layout">
+<head>
+  <title>OAuth Access Code</title>
+</head>
+<body>
+<section layout:fragment="content">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Access Code</div>
+    <div class="panel-body">
+      <p>The following access code should be entered in the application requesting access:</p>
+      <pre th:text="${code}">123123asdasd</pre>
+    </div>
+  </div>
+</section>
+</body>
+</html>

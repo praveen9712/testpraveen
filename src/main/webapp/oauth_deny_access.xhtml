@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout">
+<head>
+  <title>Access Denied</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+</head>
+<body>
+<section layout:fragment="content">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Access is denied for this application.</div>
+    <div class="panel-body">
+      <p>Access might be denied for the following reasons</p>
+      <ul>
+        <li>Requested application could not be found on our list of approved applications</li>
+        <li>Requested application does not have properly defined access restrictions</li>
+        <li>An error may have occurred while look for the requested applications information</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</body>
+</html>

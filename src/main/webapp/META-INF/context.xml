@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/accapi">
+  <Environment name="jdbc.resource" type="java.lang.String" value="classpath:jdbc.properties"/>
+  <Environment name="deploy.config.file" type="java.lang.String"
+    value="classpath:config.properties"/>
+</Context>

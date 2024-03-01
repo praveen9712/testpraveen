@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enunciate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://enunciate.webcohesion.com/schemas/enunciate-2.7.0.xsd">
+  <title>Accuro Rest API</title>
+  <description file="enunciate_description.html"/>
+  <modules>
+    <jackson disabled="true"/>
+    <c-xml-client disabled="true"/>
+    <csharp-xml-client disabled="true"/>
+    <java-xml-client disabled="true"/>
+    <obj-c-xml-client disabled="true"/>
+    <php-xml-client disabled="true"/>
+    <java-json-client disabled="true"/>
+    <javascript-client disabled="true"/>
+    <gwt-json-overlay disabled="true"/>
+    <php-json-client disabled="true"/>
+    <ruby-json-client disabled="true"/>
+    <swagger disabled="true"/>
+    <jaxrs>
+      <application path="/accapi/rest"/>
+    </jaxrs>
+  </modules>
+  <api-classes>
+    <include pattern="com.qhrtech.emr.restapi.endpoints.**"/>
+    <include pattern="com.qhrtech.emr.accuro.model.**"/>
+    <exclude pattern="com.qhrtechnologies.ws.**"/>
+    <exclude pattern="org.apache.cxf.**"/>
+    <exclude pattern="com.qhrtech.emr.restapi.controllers.**"/>
+  </api-classes>
+</enunciate>

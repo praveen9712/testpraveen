@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml" layout:decorator="layout">
+<head>
+  <title>Approve Access</title>
+</head>
+<body>
+<section layout:fragment="content">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Approve 3rd Party Access</div>
+    <div class="panel-body">
+
+      <form method="post" th:action="@{/oauth/authorize}">
+
+        <p>The application <b><span th:text="${display_name}">Example Application</span></b> is
+          requesting the following access to Accuro EMR.</p>
+
+        <div th:if="${offices.size()} > 1">
+          <p>If you approve, select an Office to grant access to:</p>
+          <select name="office">
+            <option th:each="office : ${offices}" th:text="${office.name}"
+                    th:value="${office.officeId}">Office
+            </option>
+          </select>
+        </div>
+
+        <div th:if="${offices.size()} == 1">
+          <input name="office" type="hidden" th:value="${offices.iterator().next().officeId}"/>
+          <p>Default office <b><span
+            th:text="${offices.iterator().next().getName()}">Example Office</span></b></p>
+        </div>
+
+        <br/>
+
+        <p>Permissions Requested:</p>
+        <div th:each="scope : ${scopes}">
+          <p th:text="${scope.name}" th:title="${scope.summary}">Scope Name</p>
+        </div>
+
+        <div class="form-group text-right">
+          <button id='btn_approve' name="user_oauth_approval" type="submit" value="true">Approve
+          </button>
+          <button name="user_oauth_approval" type="submit" value="false">Deny</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <style>
+    .swagger-ui .renderedMarkdown p {
+      margin: 0em auto !important;
+    }
+
+    select[disabled] {
+      display: none;
+    }
+
+    a.download-link {
+      font-size: 20px; /* Adjust the font size as needed */
+      font-family: sans-serif; /* Change the font family to your preference */
+      text-decoration: none; /* Remove underlines from the link */
+    }
+  </style>
+</head>
+<body>
+<div id="dvdownloadjson" style="display:none;margin-left:50px"><a href="./json/openapi.json" target="_blank"
+class="download-link">Download As JSON</a>
+</div>
+<div id="swagger-ui"></div>
+<script src="dist/main.js"></script>
+<script language="JavaScript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var dlink = document.getElementById("dvdownloadjson");
+    document.getElementsByClassName("version")[0].parentNode.parentNode.insertBefore(dlink, null)
+    dlink.style.display="inline-block";
+  });
+</script>
+</body>
+</html>

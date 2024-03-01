@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://dozer.sourceforge.net"
+  xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+  <!-- This file defines any special mapping rules -->
+  <configuration>
+    <custom-converters>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.BigDecimalConverter">
+        <class-a>java.math.BigDecimal</class-a>
+        <class-b>java.math.BigDecimal</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.CalendarConverter">
+        <class-a>java.util.Calendar</class-a>
+        <class-b>org.joda.time.DateTime</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.CalendarValidateConverter">
+        <class-a>java.util.Calendar</class-a>
+        <class-b>java.util.Calendar</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.LocalDateTimeCalendarConverter">
+        <class-a>org.joda.time.LocalDateTime</class-a>
+        <class-b>java.util.Calendar</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.LocalDateCalendarConverter">
+        <class-a>org.joda.time.LocalDate</class-a>
+        <class-b>java.util.Calendar</class-b>
+      </converter>
+      <converter
+        type="com.qhrtech.emr.restapi.models.dto.converter.LocalDateTimeAccuroCalendarConverter">
+        <class-a>org.joda.time.LocalDateTime</class-a>
+        <class-b>com.qhrtech.emr.accuro.model.time.AccuroCalendar</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.LocalDateConverter">
+        <class-a>org.joda.time.LocalDate</class-a>
+        <class-b>org.joda.time.LocalDate</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.DateTimeConverter">
+        <class-a>org.joda.time.DateTime</class-a>
+        <class-b>org.joda.time.LocalDateTime</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.LocalDateTimeConverter">
+        <class-a>org.joda.time.LocalDateTime</class-a>
+        <class-b>org.joda.time.LocalDateTime</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.ColorConverter">
+        <class-a>java.awt.Color</class-a>
+        <class-b>java.awt.Color</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.ScheduleSlotConverter">
+        <class-a>com.qhrtech.emr.restapi.models.dto.ScheduleSlotDto</class-a>
+        <class-b>com.qhrtech.emr.accuro.model.scheduling.ScheduleSlot</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.PatientActivityConverter">
+        <class-a>com.qhrtech.emr.accuro.model.logging.PatientActivity</class-a>
+        <class-b>com.qhrtech.emr.restapi.models.dto.PatientActivityDto</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.EyeCodeConverter">
+        <class-a>java.lang.String</class-a>
+        <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.EyeCode</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.ReactionCodeConverter">
+        <class-a>java.lang.String</class-a>
+        <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.ReactionCode</class-b>
+      </converter>
+      <converter type="com.qhrtech.emr.restapi.models.dto.converter.LifeStageTypeConverter">
+        <class-a>java.lang.String</class-a>
+        <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.LifeStageType</class-b>
+      </converter>
+    </custom-converters>
+    <copy-by-references>
+      <copy-by-reference>java.util.UUID</copy-by-reference>
+    </copy-by-references>
+  </configuration>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.eprescribe.EprescribeJobType</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.EprescribeJobTypeDto</class-b>
+    <field>
+      <a get-method="getePrescribeJobTypeId">ePrescribeJobTypeId</a>
+      <b>eprescribeJobTypeId</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.eprescribe.EprescribeJob</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.EprescribeJobDto</class-b>
+    <field>
+      <a get-method="getePrescribeJobId">ePrescribeJobId</a>
+      <b>eprescribeJobId</b>
+    </field>
+    <field>
+      <a get-method="isProcessed">processed</a>
+      <b get-method="isProcessed">processed</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accdocs.model.docs.SpadeDocument</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.spade.SpadeDocumentDto</class-b>
+    <field custom-converter=
+      "com.qhrtech.emr.restapi.models.dto.converter.HashHexToByteConverter">
+      <a>hashValue</a>
+      <b>hashValue</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.restapi.models.dto.spade.SpadeDocumentDto</class-a>
+    <class-b>com.qhrtech.emr.accdocs.model.docs.DocsMetadata</class-b>
+    <field custom-converter=
+      "com.qhrtech.emr.restapi.models.dto.converter.HashByteToHexConverter">
+      <a>hashValue</a>
+      <b>hashValue</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.scheduling.AppointmentHistory</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.AppointmentHistoryDto</class-b>
+    <field>
+      <a>date</a>
+      <b>appointmentDate</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.docs.Document</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.DocumentDto</class-b>
+    <field>
+      <a>fileType</a>
+      <b>accuroFileType</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.demographics.Office</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.OfficeDto</class-b>
+    <field>
+      <a get-method="isActive">active</a>
+      <b>active</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.scheduling.Appointment</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.AppointmentDto</class-b>
+    <field>
+      <a get-method="isBillOnly">billOnly</a>
+      <b>billOnly</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.immunization.PatientImmunization</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.PatientImmunizationDto</class-b>
+    <field>
+      <a get-method="isAdministeredInClinic">administeredInClinic</a>
+      <b>administeredInClinic</b>
+    </field>
+    <field>
+      <a>customUid</a>
+      <b>customUuid</b>
+    </field>
+    <field>
+      <a>adminVaccineUniqueId</a>
+      <b>immunizationId</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.demographics.Insurer</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.InsurerDto</class-b>
+    <field>
+      <a get-method="getIsIcbc">isIcbc</a>
+      <b>icbc</b>
+    </field>
+    <field>
+      <a get-method="getIsWcb">isWcb</a>
+      <b>wcb</b>
+    </field>
+    <field>
+      <a get-method="getIsMsp">isMsp</a>
+      <b>msp</b>
+    </field>
+    <field>
+      <a get-method="getPrivate">isPrivate</a>
+      <b>privateInsurer</b>
+    </field>
+    <field>
+      <a get-method="getRegionalMedicalAssociates">isRegionalMedicalAssociates</a>
+      <b>regionalMedicalAssociates</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.scheduling.Site</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.SiteDto</class-b>
+    <field>
+      <a get-method="isActive">active</a>
+      <b>active</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.demographics.Gender</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.GenderDto</class-b>
+    <field>
+      <a get-method="simplifiesToMale">simplifiesToMale</a>
+      <b get-method="isSimplifiesToMale">simplifiesToMale</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.allergy.PatientAllergy</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.PatientAllergyDto</class-b>
+    <field>
+      <a get-method="isMasked">masked</a>
+      <b>masked</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.prescription.PrescriptionMedication</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescriptions.PrescriptionMedicationDto</class-b>
+    <field
+      custom-converter="com.qhrtech.emr.restapi.models.dto.converter.PrescriptionStartDateConverter">
+      <a>startDate</a>
+      <b>localStartDate</b>
+    </field>
+    <field>
+      <a get-method="getDrugType">drugType</a>
+      <b>drugUse</b>
+    </field>
+    <field>
+      <a get-method="isDoNotAutofill">doNotAutofill</a>
+      <b>doNotAutofill</b>
+    </field>
+    <field>
+      <a get-method="isAllowRenewalRequests">allowRenewalRequests</a>
+      <b>allowRenewalRequests</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.medicalhistory.PatientHistoryText</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.PatientHistoryTextDto</class-b>
+    <field>
+      <a>historyTextId</a>
+      <b>id</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.medicalhistory.PatientHistoryTracking</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.PatientHistoryTrackingDto</class-b>
+    <field>
+      <a>createdUserId</a>
+      <b>creatorUserId</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.scheduling.ReminderData</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.AppointmentMaterialsDto</class-b>
+    <field>
+      <a>dbRowVersion</a>
+      <b>rowVersion</b>
+    </field>
+    <field>
+      <a get-method="isBillOnly">billOnly</a>
+      <b>billOnly</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.eprescribe.EprescribeJobHistory</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.EprescribeJobHistoryDto</class-b>
+    <field>
+      <a set-method="setEPrescriptionJobHistoryId">ePrescribeJobHistoryId</a>
+      <b>eprescribeJobHistoryId</b>
+    </field>
+    <field>
+      <a set-method="setePrescribeJobId">ePrescribeJobId</a>
+      <b>eprescribeJobId</b>
+    </field>
+
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.medicalhistory.ExternalContactIdentifier</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.ExternalContactIdentifierDto
+    </class-b>
+    <field>
+      <a>systemIdentifier</a>
+      <b>externalSystemIdentifier</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.synapse.ConversationParticipant</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.ConversationParticipantDto</class-b>
+    <field>
+      <a get-method="getContactId">contactId</a>
+      <b>conversationContactId</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.eprescribe.EprescribeJobTask</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.EprescribeJobTaskDto</class-b>
+    <field>
+      <a get-method="getePrescribeJobTaskId">ePrescribeJobTaskId</a>
+      <b>erxJobTaskId</b>
+    </field>
+    <field>
+      <a get-method="getePrescribeJobId">ePrescribeJobId</a>
+      <b>erxJobId</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.eprescribe.EprescribeJobPrescriptionMedication</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.EprescribeJobPrescriptionMedicationDto</class-b>
+    <field>
+      <a get-method="getePrescribeJobId">ePrescribeJobId</a>
+      <b>eprescribeJobId</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.medicalhistory.Contact</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.medicalhistory.ContactDto</class-b>
+    <field>
+      <a get-method="isLongDistance">longDistance</a>
+      <b get-method="isLongDistance">longDistance</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.messaging.eprescription.prescribeIt.DispenseNotification
+    </class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.prescribeit.DispenseNotificationDto</class-b>
+    <field>
+      <a>prescribeITAuthorizingRequestUuid</a>
+      <b>prescribeItAuthorizingRequestUuid</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.patient.PatientChartLock</class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.PatientChartLockDto</class-b>
+    <field>
+      <a get-method="hasExceptions">hasExceptions</a>
+      <b get-method="hasExceptions">hasExceptions</b>
+    </field>
+  </mapping>
+  <mapping>
+    <class-a>com.qhrtech.emr.accuro.model.security.AuthorizedClient
+    </class-a>
+    <class-b>com.qhrtech.emr.restapi.models.dto.authorizedclients.AuthorizedClientDto</class-b>
+    <field>
+      <a>uuid</a>
+      <b>clientUuid</b>
+    </field>
+    <field>
+      <a>createdDateTimeUTC</a>
+      <b>createdDateTimeUtc</b>
+    </field>
+  </mapping>
+
+  <mapping>
+    <class-a>com.qhrtech.emr.restapi.models.dto.AppointmentDetailsDto</class-a>
+    <class-b>com.qhrtech.emr.accuro.model.scheduling.AppointmentDetails</class-b>
+    <field-exclude type="one-way">
+      <a>otherProviderIds</a>
+      <b>otherProviderIds</b>
+    </field-exclude>
+  </mapping>
+</mappings>

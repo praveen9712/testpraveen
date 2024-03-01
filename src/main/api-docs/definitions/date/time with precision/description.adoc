@@ -1,0 +1,17 @@
+Values of this type are a string that will be formatted based on the precision of the date/time information.
+Precision refers to how much details of the date/time are known.  For example a date may only be known
+to the month an event occured, not the exact day of the month.
+
+Any value that is precise to at least the hour also supports sending the timezone as well.
+
+[options="header"]
+|===
+|Precision|Format | Format with Timezone
+|Year | 2015 | N/A
+|Month | 2015-09 | N/A
+|Date | 2015-09-30 | N/A
+|Hour | 2015-09-30T15 | 2015-09-30T15-0700
+|Minute | 2015-09-30T15:45 | 2015-09-30T15:45-0700
+|Second | 2015-09-30T15:45:15 | 2015-09-30T15:45:15-0700
+|Millisecond | 2015-09-30T15:45:15.250 | 2015-09-30T15:45:15.250-0700
+|===

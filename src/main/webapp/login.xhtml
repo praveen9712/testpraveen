@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml" layout:decorator="layout">
+<head>
+  <title>Login</title>
+</head>
+<body>
+<section layout:fragment="content">
+  <div class="alert alert-danger" role="alert"
+       th:if="${tenantType.name()} != 'SINGLE' and ${loginFailure}"
+       th:text="#{login.failure_hosted}"/>
+  <div class="alert alert-danger" role="alert"
+       th:if="${tenantType.name()} != 'HOSTED' and ${loginFailure}" th:text="#{login.failure}"/>
+  <div class="alert alert-danger" role="alert" th:if="${accessDenied}"
+       th:text="#{login.access_denied}"/>
+  <div class="alert alert-danger" role="alert" th:if="${otherError}"
+       th:text="#{login.other_error}"/>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Login</div>
+    <div class="panel-body">
+      <form id="login_form" method="post" autocomplete="off" th:action="@{/login}">
+        <div th:if="${ tenantType.name() != 'SINGLE' }">
+          <div class="form-group">
+            <label class="control-label" for="tenant">Tenant</label>
+            <input class="form-control" id="tenant" name="tenant" type="text"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="username">Username</label>
+          <input class="form-control" id="username" name="username" type="text"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="password">Password</label>
+          <input class="form-control" id="password" name="password" type="password"/>
+        </div>
+        <div class="form-group">
+          <input class="btn btn-default" type="submit" value="Log in"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</body>
+</html>

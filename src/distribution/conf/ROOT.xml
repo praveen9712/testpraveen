@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resources cachingAllowed="false" />
+<Environment name="jdbc.resource" value="file:/etc/accuro/accuro-api/jdbc.properties" type="java.lang.String"/>
+<Environment name="spring.profiles.active" value="release" type="java.lang.String"/>
+<Environment name="deploy.config.file" value="file:/etc/accuro/accuro-api/config.properties" type="java.lang.String"/>
+</Context>

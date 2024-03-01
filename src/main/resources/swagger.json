@@ -1,0 +1,18 @@
+{
+  "resourcePackages": [
+    "com.qhrtech.emr.restapi.endpoints.materials.v2",
+    "com.qhrtech.emr.restapi.endpoints.materials",
+    "com.qhrtech.emr.restapi.endpoints.patient",
+    "com.qhrtech.emr.restapi.endpoints.provider",
+    "com.qhrtech.emr.restapi.endpoints.provider.medicalhistory",
+    "com.qhrtech.emr.restapi.endpoints"
+  ],
+  "readerClass": "com.qhrtech.emr.restapi.openapi.OpenApiReader",
+  "openAPI": {
+    "info": {
+      "version": "10.4.1-SNAPSHOT",
+      "title": "Accuro Rest API",
+      "description": "Welcome to the Accuro API website. Here you will find all the information and resources required to interface with our Accuro EMR software."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+
+> accuro-api-guide@0.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+i Compiling Client
+i Compiling Server
+√ Client: Compiled successfully in 3.01s
+√ Server: Compiled successfully in 6.86s
+[Local Search] [INFO]: Gathering documents
+[Local Search] [INFO]: Parsing documents
+[Local Search] [INFO]: 2 indexes will be created.
+[Local Search] [INFO]: Building index default (4 documents)
+[Local Search] [INFO]: Building index docs-default-current (109 documents)
+[Local Search] [INFO]: Index default written to disk
+[Local Search] [INFO]: Index docs-default-current written to disk
+[SUCCESS] Generated static files in "build".
+[INFO] Use `npm run serve` command to test your build locally.

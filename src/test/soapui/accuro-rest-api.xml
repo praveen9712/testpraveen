@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project xmlns:con="http://eviware.com/soapui/config" abortOnError="false"
+  activeEnvironment="Default" id="a823ef0f-eaea-43c8-bbe5-20bd004032d0" name="Accuro REST" resourceRoot=""
+  runType="SEQUENTIAL" soapui-version="5.2.1">
+  <con:settings/>
+  <con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="337ac036-0a28-4c23-bb36-cee92ffee959"
+    name="root" type="rest" wadlVersion="http://wadl.dev.java.net/2009/02"
+    xsi:type="con:RestService">
+    <con:settings/>
+    <con:definitionCache rootPart="" type="TEXT"/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8080</con:endpoint>
+      <con:endpoint>http://localhost:8088/accapi</con:endpoint>
+    </con:endpoints>
+    <con:resource id="1c057f88-9366-4a88-8f9b-7512cd0a8f5b" name="rest" path="/rest/">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource id="903cd805-3969-40b8-9cf4-21d5a26d67b1" name="clinic patients"
+        path="clinic/patients">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource id="6a93d393-aa46-4d07-bb35-5876bd46b9bc" name="patientId" path="5">
+          <con:settings/>
+          <con:parameters/>
+          <con:resource id="c3e1efa9-a0cb-4d43-80b2-d2f6b5f4c7cd" name="lab-order" path="lab-order">
+            <con:settings/>
+            <con:parameters/>
+            <con:resource id="b30caa21-abcc-41e5-95be-376e58587850"
+              name="1"
+              path="bGFiIG9yZGVy.eyJwYXRpZW50SWQiOjQsInNvdXJjZUlkIjotMSwib3JkZXJHcm91cCI6Ik1hbnVhbC0xNDQyNTI1NDY0MDYxIn0">
+              <con:settings/>
+              <con:parameters/>
+              <con:resource id="466acc82-278c-4700-973f-54955f8528f7" name="report" path="report">
+                <con:settings/>
+                <con:parameters/>
+                <con:method id="06ec9ad2-16f0-4460-a278-473936d794cf" method="GET"
+                  name="Get Report">
+                  <con:settings/>
+                  <con:parameters/>
+                  <con:representation type="FAULT">
+                    <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                    <con:status>401</con:status>
+                    <con:params/>
+                    <con:element
+                      xmlns:rep="http://localhost/accapi/rest/patient/4/lab-order/1/report">
+                      rep:Fault
+                    </con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType>application/octet-stream</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="FAULT">
+                    <con:mediaType>text/plain</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="FAULT">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                    <con:element
+                      xmlns:rep="http://localhost/accapi/rest/patient/4/lab-order/1/report">
+                      rep:Fault
+                    </con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType>application/pdf</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>0</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>0</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                  </con:representation>
+                  <con:request id="c69cd346-411d-4bac-8d04-032f6e619fb4" mediaType="application/json"
+                    name="Request 1">
+                    <con:settings>
+                      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">
+                        &lt;xml-fragment/>
+                      </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/accapi/rest/patient/4/lab-order/1/report
+                    </con:originalUri>
+                    <con:credentials>
+                      <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                      <con:authType>OAuth 2.0</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                  </con:request>
+                </con:method>
+              </con:resource>
+              <con:method id="0434b2d0-97db-4ab3-aeca-71b14de801f3" method="GET" name="Method 1">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="FAULT">
+                  <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                  <con:status>401</con:status>
+                  <con:params/>
+                  <con:element
+                    xmlns:a47="http://localhost/accapi/rest/patient/4/lab-order/62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d">
+                    a47:Fault
+                  </con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>204</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element
+                    xmlns:a47="http://localhost/accapi/rest/patient/4/lab-order/62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d">
+                    a47:Response
+                  </con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:status>500</con:status>
+                  <con:params/>
+                  <con:element
+                    xmlns:a47="http://localhost/accapi/rest/patient/4/lab-order/62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d">
+                    a47:Fault
+                  </con:element>
+                </con:representation>
+                <con:request id="35c1d121-d3f0-42bb-a495-70927a01b8c8" mediaType="application/json"
+                  name="Get Lab Order">
+                  <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8080</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>
+                    http://localhost/accapi/rest/patient/4/lab-order/62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d
+                  </con:originalUri>
+                  <con:credentials>
+                    <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                    <con:authType>OAuth 2.0</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+                </con:request>
+              </con:method>
+            </con:resource>
+            <con:method id="96713b96-3139-4d61-ada9-70bec70d1300" method="GET" name="Method 1">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="FAULT">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>404</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                <con:status>401</con:status>
+                <con:params/>
+                <con:element xmlns:lab="http://localhost/accapi/rest/patient/3/lab-order">
+                  lab:Fault
+                </con:element>
+              </con:representation>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>500</con:status>
+                <con:params/>
+                <con:element xmlns:lab="http://localhost/accapi/rest/patient/3/lab-order">
+                  lab:Fault
+                </con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>200</con:status>
+                <con:params/>
+                <con:element>Response</con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>0</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>0</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>0</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:request id="0303fe59-f93b-4e01-ade8-ccfbcb39fcc1" mediaType="application/json"
+                name="Get Lab Orders">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>http://localhost:8080</con:endpoint>
+                <con:request/>
+                <con:originalUri>http://localhost/accapi/rest/patient/3/lab-order</con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                  <con:authType>OAuth 2.0</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters/>
+              </con:request>
+            </con:method>
+          </con:resource>
+          <con:resource id="f7ce6961-d62f-4f86-bb9d-203bfd754580" name="activity" path="activity">
+            <con:settings/>
+            <con:parameters/>
+            <con:resource id="918805ad-9218-4d02-98c8-a277b28b0793" name="search" path="search">
+              <con:settings/>
+              <con:parameters/>
+              <con:method id="09e7c752-d267-4d02-bf59-67b003651ef1" method="POST" name="Method 1">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element>Response</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                  <con:mediaType xsi:nil="true"/>
+                  <con:status>0</con:status>
+                  <con:params/>
+                  <con:element>data</con:element>
+                </con:representation>
+                <con:request id="b1f12f36-0985-42e2-b066-887352d0d37c" mediaType="application/json"
+                  name="Request 1" postQueryString="false">
+                  <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8080</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>http://localhost/accapi/rest/patient/4/activity/search
+                  </con:originalUri>
+                  <con:credentials>
+                    <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                    <con:authType>OAuth 2.0</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+                </con:request>
+              </con:method>
+            </con:resource>
+            <con:resource
+              id="bd9823a4-55b4-4895-b9d0-f3efc3102279"
+              name="62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d"
+              path="62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d">
+              <con:settings/>
+              <con:parameters/>
+              <con:method id="bf127c3a-c91c-4166-9a86-95aa8de1d866" method="GET" name="Method 1">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element>Response</con:element>
+                </con:representation>
+                <con:request id="ab0e7280-ab57-46c0-9938-5bbfd22f2341" mediaType="application/json"
+                  name="Request 1">
+                  <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>http://localhost:8080</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>
+                    http://localhost/accapi/rest/patient/4/activity/62474669494739795a475679.65794a77595852705a573530535751694f6a5173496e4e7664584a6a5a556c6b496a6f744d53776962334a6b5a584a48636d393163434936496b3168626e5668624330784e4451794e54457a4d7a51334d6a4d34496e303d
+                  </con:originalUri>
+                  <con:credentials>
+                    <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                    <con:authType>OAuth 2.0</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+                </con:request>
+              </con:method>
+            </con:resource>
+          </con:resource>
+          <con:method id="ded31a7c-aaf2-43b9-8ab1-b0588fe6748f" method="GET" name="Get Patient">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:ns="http://localhost/accapi/rest/patient/3">ns:Fault</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500 404</con:status>
+              <con:params/>
+              <con:element xmlns:ns="http://localhost/accapi/rest/patient/3">ns:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:ns="http://localhost/accapi/rest/patient/3">ns:Response
+              </con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+              <con:status>404</con:status>
+              <con:params/>
+              <con:element>html</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>text/html;charset=utf-8</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element>html</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>404</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:request id="8bb3f3fa-8cb1-48d7-a540-b34e74912c97" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/patient/3</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+          <con:method id="10582ad3-1b2a-4004-a67a-743d53d97961" method="PUT" name="Save Patient">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element xmlns:ns="http://localhost/accapi/rest/patient/4">ns:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:request id="a2fc0e99-d268-4df9-8675-f6cc9de733a6" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/patient/4</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="147858d1-bdac-4f3c-b9a4-94370b3607ef" name="scheduler" path="scheduler">
+          <con:settings/>
+          <con:parameters/>
+          <con:resource id="81161348-30a8-4998-a934-9b2d90c87d09" name="appointments"
+            path="appointments">
+            <con:settings/>
+            <con:parameters>
+              <con:parameter>
+                <con:name>start_date</con:name>
+                <con:value/>
+                <con:style>QUERY</con:style>
+                <con:default/>
+                <con:description xsi:nil="true"/>
+              </con:parameter>
+              <con:parameter>
+                <con:name>end_date</con:name>
+                <con:value/>
+                <con:style>QUERY</con:style>
+                <con:default/>
+                <con:description xsi:nil="true"/>
+              </con:parameter>
+            </con:parameters>
+            <con:method id="f2004daf-c731-4f49-a3b8-73a629f0b3cc" method="GET" name="Method 1">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>500</con:status>
+                <con:params/>
+                <con:element
+                  xmlns:app="http://localhost/accapi/rest/patient/scheduler/appointments">app:Fault
+                </con:element>
+              </con:representation>
+              <con:request id="b9f9346b-83ae-44a5-a71a-f82e1e8398f2" mediaType="application/json"
+                name="Request 1">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>http://localhost:8080</con:endpoint>
+                <con:request/>
+                <con:originalUri>http://localhost/accapi/rest/patient/scheduler/appointments
+                </con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                  <con:authType>OAuth 2.0</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters>
+                  <con:entry key="end_date" value="2016-05-10"/>
+                  <con:entry key="start_date" value="2016-05-01"/>
+                </con:parameters>
+                <con:parameterOrder>
+                  <con:entry>start_date</con:entry>
+                  <con:entry>end_date</con:entry>
+                </con:parameterOrder>
+              </con:request>
+            </con:method>
+          </con:resource>
+        </con:resource>
+      </con:resource>
+      <con:resource id="70fd4a86-33d6-4fef-8b73-ca349f510e56" name="portal" path="portal">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource id="a88b15d9-4919-4b85-9739-5f2b7683c290" name="token" path="token">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter>
+              <con:name>office_id</con:name>
+              <con:value/>
+              <con:style>QUERY</con:style>
+              <con:default/>
+              <con:description xsi:nil="true"/>
+            </con:parameter>
+          </con:parameters>
+          <con:method id="b32c7aca-af3a-4259-9a5e-2c27ca192b31" method="POST" name="Token">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element xmlns:tok="http://localhost/accapi/rest/portal/token">tok:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:request id="734f9ab5-46b2-44d2-aa87-cda1361b3244" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/portal/token</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters>
+                <entry key="office_id" value="18227" xmlns="http://eviware.com/soapui/config"/>
+              </con:parameters>
+              <con:parameterOrder>
+                <con:entry>office_id</con:entry>
+              </con:parameterOrder>
+            </con:request>
+          </con:method>
+        </con:resource>
+      </con:resource>
+      <con:resource id="4edb913a-f9d2-45e6-ab21-6cbb6e67ee62" name="details" path="details">
+        <con:settings/>
+        <con:parameters/>
+        <con:method id="9db55198-88ae-4465-b999-2de583150153" method="GET" name="Method 1">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+            <con:status>401</con:status>
+            <con:params/>
+            <con:element xmlns:test="http://localhost/accapi/rest/test">test:Fault</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html;charset=utf-8</con:mediaType>
+            <con:status>500</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>500 401</con:status>
+            <con:params/>
+            <con:element xmlns:test="http://localhost/accapi/rest/test">test:Fault</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>500</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request id="8ded16eb-fd4c-45a6-961a-4d7107dce40c" mediaType="application/json"
+            name="Request 1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/test</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource id="119fd3f4-2d17-43e5-aa68-66d70485d786" name="locations" path="locations">
+        <con:settings/>
+        <con:parameters/>
+        <con:method id="780e9ff2-5ef8-4f26-8fd4-7a8580b4bb7f" method="GET" name="Method 1">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>500</con:status>
+            <con:params/>
+            <con:element xmlns:loc="http://localhost/accapi/rest/locations">loc:Fault</con:element>
+          </con:representation>
+          <con:request id="2552078d-de10-4284-a7cf-ccecb052feff" mediaType="application/json"
+            name="Request 1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/locations</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource id="64c70cb4-efcd-4a96-8218-8a40b0c85db4" name="genders" path="genders">
+        <con:settings/>
+        <con:parameters/>
+        <con:method id="cd68a185-7621-43f4-96ff-ee68e73e9495" method="GET" name="Method 1">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+            <con:status>401</con:status>
+            <con:params/>
+            <con:element xmlns:gen="http://localhost/accapi/rest/genders">gen:Fault</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>Response</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>0</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request id="bced98ae-d190-41b3-9818-13d60be16366" mediaType="application/json"
+            name="Request 1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/genders</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource id="15d2c93d-bfb1-43c9-83fe-234b081f64c6" name="clinic scheduler"
+        path="clinic/scheduler">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource id="e4e4a1c6-c343-4d43-aa07-02994a5270b3" name="appointments"
+          path="appointments">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter>
+              <con:name>start_date</con:name>
+              <con:value/>
+              <con:style>QUERY</con:style>
+              <con:default/>
+              <con:description xsi:nil="true"/>
+            </con:parameter>
+            <con:parameter>
+              <con:name>end_date</con:name>
+              <con:value/>
+              <con:style>QUERY</con:style>
+              <con:default/>
+              <con:description xsi:nil="true"/>
+            </con:parameter>
+          </con:parameters>
+          <con:resource id="1e3ff999-9fc6-4a4a-b164-a51271b9b67b" name="{app_id}" path="9">
+            <con:settings/>
+            <con:parameters/>
+            <con:method id="a9fe5339-5584-4ae9-bf1c-1f053771d528" method="GET"
+              name="Get Appointment">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="RESPONSE">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>200</con:status>
+                <con:params/>
+                <con:element xmlns:ns="http://localhost/accapi/rest/schedule/appointments/9">
+                  ns:Response
+                </con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>204</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>204</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>204</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>500 401</con:status>
+                <con:params/>
+                <con:element xmlns:ns="http://localhost/accapi/rest/schedule/appointments/9">
+                  ns:Fault
+                </con:element>
+              </con:representation>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                <con:status>401</con:status>
+                <con:params/>
+                <con:element xmlns:ns="http://localhost/accapi/rest/schedule/appointments/9">
+                  ns:Fault
+                </con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>204</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>204</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:request id="054a4aa1-3ae7-4570-85e9-23a7c4bd265a" mediaType="application/json"
+                name="Request 1">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>http://localhost:8080</con:endpoint>
+                <con:request/>
+                <con:originalUri>http://localhost/accapi/rest/schedule/appointments/9
+                </con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                  <con:authType>OAuth 2.0</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters/>
+                <con:parameterOrder>
+                  <con:entry>start_date</con:entry>
+                  <con:entry>end_date</con:entry>
+                </con:parameterOrder>
+              </con:request>
+            </con:method>
+            <con:method id="c8840cc6-7344-45ed-b171-81991b7a2e82" method="POST"
+              name="Update Appointment">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                <con:status>401</con:status>
+                <con:params/>
+                <con:element xmlns:ns="http://localhost/accapi/rest/schedule/appointments/9">
+                  ns:Fault
+                </con:element>
+              </con:representation>
+              <con:representation type="REQUEST">
+                <con:mediaType>application/json</con:mediaType>
+                <con:params/>
+              </con:representation>
+              <con:representation type="RESPONSE">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>200</con:status>
+                <con:params/>
+              </con:representation>
+              <con:representation type="FAULT">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>400 500</con:status>
+                <con:params/>
+                <con:element xmlns:ns="http://localhost/accapi/rest/schedule/appointments/9">
+                  ns:Fault
+                </con:element>
+              </con:representation>
+              <con:representation type="FAULT">
+                <con:mediaType xsi:nil="true"/>
+                <con:status>405</con:status>
+                <con:params/>
+                <con:element>data</con:element>
+              </con:representation>
+              <con:request id="4a713e9c-b1be-489b-96a6-e231ee844a5a" mediaType="application/json"
+                name="Request 1" postQueryString="false">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>http://localhost:8080</con:endpoint>
+                <con:request>{
+                  "appointmentId": 11,
+                  "date": "2015-11-24",
+                  "startTime": 900,
+                  "endTime": 1100,
+                  "subColumn": 0,
+                  "patientId": 4,
+                  "providerId": 25864,
+                  "resourceId": null,
+                  "billingProviderId": 25864,
+                  "referringProviderId": -1,
+                  "insurerId": 1,
+                  "notes": "",
+                  "alerts": "",
+                  "reasonId": null,
+                  "typeId": null,
+                  "priorityId": 0,
+                  "location": "D",
+                  "officeId": 18226,
+                  "statuses": []
+                  }
+                </con:request>
+                <con:originalUri>http://localhost/accapi/rest/schedule/appointments/9
+                </con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                  <con:authType>OAuth 2.0</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters/>
+                <con:parameterOrder>
+                  <con:entry>start_date</con:entry>
+                  <con:entry>end_date</con:entry>
+                </con:parameterOrder>
+              </con:request>
+            </con:method>
+          </con:resource>
+          <con:method id="5cce98ff-f734-4eca-a056-f6d56fcb1ab2" method="GET"
+            name="Get Appointments">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>text/plain</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element xmlns:app="http://localhost/accapi/rest/schedule/appointments">
+                app:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>text/html;charset=utf-8</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element>html</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:app="http://localhost/accapi/rest/schedule/appointments">
+                app:Fault
+              </con:element>
+            </con:representation>
+            <con:request id="2d3572e2-a93b-4173-80d1-d70ddd915c98" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/schedule/appointments</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters>
+                <con:entry key="end_date" value="2016-06-01"/>
+                <con:entry key="start_date" value="2016-01-01"/>
+              </con:parameters>
+              <con:parameterOrder>
+                <con:entry>start_date</con:entry>
+                <con:entry>end_date</con:entry>
+              </con:parameterOrder>
+            </con:request>
+          </con:method>
+          <con:method id="d8eb3013-540d-4ae8-aa90-76480d320931" method="PUT"
+            name="Create Appointment">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:app="http://localhost/accapi/rest/schedule/appointments">
+                app:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element xmlns:app="http://localhost/accapi/rest/schedule/appointments">
+                app:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:request id="0d407369-e8b6-49b0-88d9-2f9f24159ad6" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:encoding/>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request>{
+                "appointmentId": 0,
+                "date": "2016-01-29",
+                "startTime": 900,
+                "endTime": 1100,
+                "subColumn": 0,
+                "patientId": 5,
+                "providerId": 25864,
+                "resourceId": null,
+                "billingProviderId": 25864,
+                "referringProviderId": -1,
+                "insurerId": 1,
+                "notes": "Test note",
+                "alerts": "",
+                "reasonId": 3,
+                "typeId": null,
+                "priorityId": 0,
+                "location": "D",
+                "officeId": 18226,
+                "statuses" : [
+                {
+                "statusId": -1,
+                "statusName": "Arrived",
+                "statusAbbreviation": "A",
+                "shape": "NONE",
+                "color": null
+                }
+                ]
+                }
+              </con:request>
+              <con:originalUri>http://localhost/accapi/rest/schedule/appointments</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+              <con:parameterOrder>
+                <con:entry>start_date</con:entry>
+                <con:entry>end_date</con:entry>
+              </con:parameterOrder>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="abecefed-73b4-4f06-adff-369900397a81" name="types" path="types">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="19ffc4a5-1567-4687-ae24-0a019bf78ad7" method="GET" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element xmlns:typ="http://localhost/accapi/rest/schedule/types">typ:Fault
+              </con:element>
+            </con:representation>
+            <con:request id="67065c18-42de-47d4-bb0d-63fc6cba0646" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/schedule/types</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="6d6d7915-813f-4c3c-8e2c-57091a967eda" name="reasons" path="reasons">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="9de5121c-bfa3-4cf4-9bbd-8cd167057559" method="GET" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>Response</con:element>
+            </con:representation>
+            <con:request id="2f19407a-3f98-4a86-b618-cf0272b27a30" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/schedule/reasons</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+              <con:parameterOrder/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="837e8ebc-455d-43e4-a2ba-1dfa017ec994" name="statuses" path="statuses">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="97669ddb-6bce-4af7-9af1-2c9c87904c15" method="GET" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>Response</con:element>
+            </con:representation>
+            <con:request id="09a5d9e6-f76c-4d47-b8fd-354889adbd12" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/schedule/statuses</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="5bbacfe2-05b1-4308-9917-05ededdcc711" name="suggestions"
+          path="suggestions">
+          <con:settings/>
+          <con:parameters/>
+          <con:resource id="3d714042-7906-4ec9-b192-defa2a72a5ad" name="applied" path="applied">
+            <con:settings/>
+            <con:parameters>
+              <con:parameter>
+                <con:name>start_date</con:name>
+                <con:value/>
+                <con:style>QUERY</con:style>
+                <con:default/>
+                <con:description xsi:nil="true"/>
+              </con:parameter>
+              <con:parameter>
+                <con:name>end_date</con:name>
+                <con:value/>
+                <con:style>QUERY</con:style>
+                <con:default/>
+                <con:description xsi:nil="true"/>
+              </con:parameter>
+            </con:parameters>
+            <con:method id="22f730e0-70c2-47dc-80f9-c7712e687d66" method="GET" name="Method 1">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="RESPONSE">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>200</con:status>
+                <con:params/>
+                <con:element xmlns:app="http://localhost/accapi/rest/schedule/suggestions/applied">
+                  app:Response
+                </con:element>
+              </con:representation>
+              <con:request id="21f12e39-1384-4fc4-97ba-99c06c783cbb" mediaType="application/json"
+                name="Request 1">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>http://localhost:8080</con:endpoint>
+                <con:request/>
+                <con:originalUri>http://localhost/accapi/rest/schedule/suggestions/applied
+                </con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                  <con:authType>OAuth 2.0</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters>
+                  <con:entry key="end_date" value="2016-12-30"/>
+                  <con:entry key="start_date" value="2016-01-01"/>
+                </con:parameters>
+                <con:parameterOrder>
+                  <con:entry>start_date</con:entry>
+                  <con:entry>end_date</con:entry>
+                </con:parameterOrder>
+              </con:request>
+            </con:method>
+          </con:resource>
+          <con:resource id="adaf031c-c1b2-4f02-bede-44a52c512591" name="all" path="all">
+            <con:settings/>
+            <con:parameters/>
+            <con:method id="81dfa487-1357-4e60-ac34-a56ba64d5ac0" method="GET" name="Method 1">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="RESPONSE">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>200</con:status>
+                <con:params/>
+                <con:element>Response</con:element>
+              </con:representation>
+              <con:request id="d507b007-4f35-44b5-b1af-efc37353cf42" mediaType="application/json"
+                name="Request 1">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>http://localhost:8080</con:endpoint>
+                <con:request/>
+                <con:originalUri>http://localhost/accapi/rest/schedule/suggestions/all
+                </con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                  <con:authType>OAuth 2.0</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:parameters/>
+                <con:parameterOrder/>
+              </con:request>
+            </con:method>
+          </con:resource>
+        </con:resource>
+        <con:resource id="9f2520bc-77d4-49a2-84da-68de39e25828" name="priorities" path="priorities">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="34c0ecea-4b02-4e00-bc7a-610539d11007" method="GET" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>Response</con:element>
+            </con:representation>
+            <con:request id="7d18c187-528a-43fb-9b4a-f3677785512a" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/schedule/priorities</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+      </con:resource>
+      <con:resource id="0da58332-ff00-48d9-8bb7-c72dc27f4964" name="jonoke" path="jonoke">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource id="56e437fe-1372-40d6-a11f-b91456e16bbc" name="login" path="login">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="7c2d5dce-3fb2-4272-8b19-06fc4d022298" method="PUT" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:log="http://localhost/accapi/rest/jonoke/login">log:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>401 500</con:status>
+              <con:params/>
+              <con:element xmlns:log="http://localhost/accapi/rest/jonoke/login">log:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:log="http://localhost/accapi/rest/jonoke/login">log:Response
+              </con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:request id="18ca17dd-db9c-4c44-a9d1-6dafde8e5fc0" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request>{
+                "username":"text.email@qhrtech.com",
+                "password":"Test123"
+                }
+              </con:request>
+              <con:originalUri>http://localhost/accapi/rest/jonoke/login</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+              <con:parameterOrder/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="23526064-c178-44c4-9fbb-9a2d85999026" name="sign_up" path="sign_up">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="e84416f7-ceec-4782-8012-2c9962f257cb" method="PUT" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:sign="http://localhost/accapi/rest/jonoke/sign_up">sign:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>401 500</con:status>
+              <con:params/>
+              <con:element xmlns:sign="http://localhost/accapi/rest/jonoke/sign_up">sign:Fault
+              </con:element>
+            </con:representation>
+            <con:request id="450da799-c97e-49f5-8956-54aa51278fe1" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request>{
+                "jonoke_login":"TestUser",
+                "jonoke_password":"Test123",
+                "email":"test6@medeo.dev",
+                "password":"test123"
+                }
+              </con:request>
+              <con:originalUri>http://localhost/accapi/rest/jonoke/sign_up</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Manual Code</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+              <con:parameterOrder/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="0e3ade6a-daf1-42d9-bffb-7fb0e843b120" name="link" path="link">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="220696a8-3345-4ec0-8150-21be3ae9fe0b" method="PUT" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:link="http://localhost/accapi/rest/jonoke/link">link:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500 401</con:status>
+              <con:params/>
+              <con:element xmlns:link="http://localhost/accapi/rest/jonoke/link">link:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>204</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>204</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>204</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>204</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>202</con:status>
+              <con:params/>
+              <con:element xmlns:link="http://localhost/accapi/rest/jonoke/link">link:Response
+              </con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+              <con:mediaType>multipart/form-data</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>415</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+              <con:mediaType>text/xml</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>415</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>415</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>405</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>415</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>415</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:request id="b3c53164-6581-403a-84ab-610540ea0b0c" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request>{
+                "jonoke_login":"TestUser",
+                "jonoke_password":"Test123",
+                "email":"test6@medeo.dev",
+                "password":"test123"
+                }
+              </con:request>
+              <con:originalUri>http://localhost/accapi/rest/jonoke/link</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Manual Code</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+              <con:parameterOrder/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="40ffb9d4-1edc-4da1-a26a-79794d0b2b47" name="patient_invite_sign_up"
+          path="patient_invite_sign_up">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="283dd367-64cb-49f0-b1f2-24197e4954f9" method="PUT" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>404</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>401 500</con:status>
+              <con:params/>
+              <con:element xmlns:pat="http://localhost/accapi/rest/jonoke/patient_invite_sign_up">
+                pat:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+              <con:status>401</con:status>
+              <con:params/>
+              <con:element xmlns:pat="http://localhost/accapi/rest/jonoke/patient_invite_sign_up">
+                pat:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:pat="http://localhost/accapi/rest/jonoke/patient_invite_sign_up">
+                pat:Response
+              </con:element>
+            </con:representation>
+            <con:request id="a8348794-e6c6-4116-8307-e6105b61fd60" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request>{
+                "patient_demographics":{
+                "health_card":"1234567890",
+                "name":"ttest",
+                "phone":"1234",
+                "birth_date":"1950-10-29"
+                },
+                "access_code":"",
+                "phone_number":"2508001234",
+                "email":"test2@qhrtech.com",
+                "password":"test123"
+                }
+              </con:request>
+              <con:originalUri>http://localhost/accapi/rest/jonoke/patient_invite_sign_up
+              </con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:resource id="98dd7be3-70fa-4381-8db4-54863eea52db" name="patient_invite_link"
+          path="patient_invite_link">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="b6d142b2-89b0-49c2-9365-9ff23af82196" method="PUT" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500 401</con:status>
+              <con:params/>
+              <con:element xmlns:pat="http://localhost/accapi/rest/jonoke/patient_invite_link">
+                pat:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="REQUEST">
+              <con:mediaType>application/json</con:mediaType>
+              <con:params/>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType xsi:nil="true"/>
+              <con:status>0</con:status>
+              <con:params/>
+              <con:element>data</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:pat="http://localhost/accapi/rest/jonoke/patient_invite_link">
+                pat:Response
+              </con:element>
+            </con:representation>
+            <con:request id="e8cf84bb-06fe-4a5e-b22e-18fc7ccb5475" mediaType="application/json"
+              name="Request 1" postQueryString="false">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request>{
+                "patient_demographics":{
+                "health_card":"1234567890",
+                "name":"ttest",
+                "phone":"1234",
+                "birth_date":"1950-10-29"
+                },
+                "access_code":"",
+                "email":"test2@qhrtech.com",
+                "password":"test123"
+                }
+              </con:request>
+              <con:originalUri>http://localhost/accapi/rest/jonoke/patient_invite_link
+              </con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+      </con:resource>
+      <con:resource id="a769a130-227c-499e-ac62-16eae919cd34" name="portal scheduler"
+        path="patient/scheduler">
+        <con:settings/>
+        <con:parameters/>
+      </con:resource>
+      <con:resource id="fd550677-91eb-4b5a-ac55-4553d8137c1a" name="clinic insurers"
+        path="clinic/insurers">
+        <con:settings/>
+        <con:parameters/>
+      </con:resource>
+      <con:resource id="f713057d-3535-406b-ba8b-c78688fbbcdd" name="portal labs"
+        path="patient/labs">
+        <con:settings/>
+        <con:parameters/>
+      </con:resource>
+      <con:resource id="2dd7d4d8-9c28-4665-912a-a111233dcdeb" name="offices" path="offices">
+        <con:settings/>
+        <con:parameters/>
+        <con:method id="ad0adcf0-f331-4266-a750-71a80123bce3" method="GET" name="Method 1">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>Response</con:element>
+          </con:representation>
+          <con:request id="5e1a3130-13d2-4bdc-850b-3e96b2005f37" mediaType="application/json"
+            name="Request 1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/offices</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource id="ef3d3fe5-71a9-418d-96af-13d703f51971" name="patient patients"
+        path="patient/patients">
+        <con:settings/>
+        <con:parameters/>
+        <con:method id="780984db-13d8-4f8a-8ca5-b9ba7401334b" method="GET" name="Method 1">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>500 404</con:status>
+            <con:params/>
+            <con:element xmlns:pat="http://localhost/accapi/rest/clinic/patients">pat:Fault
+            </con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:pat="http://localhost/accapi/rest/clinic/patients">pat:Response
+            </con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html;charset=utf-8</con:mediaType>
+            <con:status>500</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>0</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+            <con:status>403</con:status>
+            <con:params/>
+            <con:element xmlns:pat="http://localhost/accapi/rest/clinic/patients">pat:Fault
+            </con:element>
+          </con:representation>
+          <con:request id="e8202b74-1a53-42e8-841f-0898bb40c5ef" mediaType="application/json"
+            name="Request 1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/clinic/patients</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource id="33ef55d4-c2f1-4877-8d4d-c083b4dcf37d" name="version" path="version">
+        <con:settings/>
+        <con:parameters/>
+        <con:method id="453289e2-3f66-4f3b-91a6-d1971711a77d" method="GET" name="Method 1">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ver="http://localhost/accapi/rest/version">ver:Response</con:element>
+          </con:representation>
+          <con:request id="0ecd80a9-c527-4e19-a77f-71821c9481a3" mediaType="application/json"
+            name="Request 1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding/>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/version</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource id="6b322433-f841-4b0a-a7e4-35a1b9b803c7" name="letters" path="clinic/letters">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource id="c9b24410-82d1-48cd-b7ac-c72c2a9f8da5" name="types" path="types">
+          <con:settings/>
+          <con:parameters/>
+          <con:method id="e1db46cf-f738-4dbe-a11e-6f2acfb072f1" method="GET" name="Method 1">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>500</con:status>
+              <con:params/>
+              <con:element xmlns:typ="http://localhost/accapi/rest/clinic/letters/types">typ:Fault
+              </con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>Response</con:element>
+            </con:representation>
+            <con:request id="39a3783a-22b8-4c2e-8cc3-9ce9302b9606" mediaType="application/json"
+              name="Request 1">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>http://localhost:8080</con:endpoint>
+              <con:request/>
+              <con:originalUri>http://localhost/accapi/rest/clinic/letters/types</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+                <con:authType>OAuth 2.0</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters/>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:method id="5c6c0868-2ea1-4a49-bfe3-74560b83b837" method="PUT" name="Create Letter">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>500</con:status>
+            <con:params/>
+            <con:element xmlns:let="http://localhost/accapi/rest/clinic/letters">let:Fault
+            </con:element>
+          </con:representation>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>0</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>0</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request id="d0bc1eee-7993-47df-bfe5-d79b3b74ca20" mediaType="application/json"
+            name="Request 1" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/accapi/rest/clinic/letters</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Implicit</con:selectedAuthProfile>
+              <con:authType>OAuth 2.0</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer>
+    <con:oAuth2Profile>
+      <con:name>Implicit</con:name>
+      <con:clientID>0Zi0An2notaxbhJS6cEG</con:clientID>
+      <con:authorizationURI>http://localhost:8080/oauth/authorize</con:authorizationURI>
+      <con:redirectURI>display-code</con:redirectURI>
+      <con:accessToken>ccafb957-6139-4bc9-bd88-e4a4fcffeef5</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>IMPLICIT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope/>
+      <con:accessTokenStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        RETRIEVED_FROM_SERVER
+      </con:accessTokenStatus>
+      <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
+      <con:accessTokenIssuedTime>1467828362</con:accessTokenIssuedTime>
+      <con:javaScripts>
+        <con:entry>function consent() {
+          document.getElementById('btn_approve').click();
+          }
+          if ( document.getElementById('username') ) {
+          document.getElementById('username').value = 'DavidDoctor';
+          document.getElementById('password').value = 'david123';
+          document.getElementById('login_form').submit();
+          } else if ( document.getElementById('btn_approve') ) {
+          window.setInterval( consent, 100 );
+          }
+        </con:entry>
+        <con:entry>
+          function consent() {
+          document.getElementById('btn_approve').click();
+          }
+          if ( document.getElementById('btn_approve') ) {
+          window.setInterval( consent, 100 );
+          }
+        </con:entry>
+      </con:javaScripts>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>Auth Code</con:name>
+      <con:clientID>BHZ9xc0qEoEVOVhI69DF</con:clientID>
+      <con:clientSecret>06d4c6c2a895c7b09e29ba51042a30e98550fc94c931a03b4e1c0c8ae332f5e6
+      </con:clientSecret>
+      <con:authorizationURI>https://ezreferral-api.stg.qhrtech.com/oauth/authorize
+      </con:authorizationURI>
+      <con:accessTokenURI>https://ezreferral-api.stg.qhrtech.com/oauth/token</con:accessTokenURI>
+      <con:redirectURI>urn:ietf:wg:oauth:2.0:oob</con:redirectURI>
+      <con:accessToken>Xqan6j</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope/>
+      <con:accessTokenStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:javaScripts>
+        <con:entry>function consent() {
+          document.getElementById('btn_approve').click();
+          }
+
+          if ( document.getElementById('username') ) {
+          document.getElementById('username').value = 'DavidDoctor';
+          document.getElementById('password').value = 'david123';
+          document.getElementById('login_form').submit();
+          } else if ( document.getElementById('btn_approve') ) {
+          window.setInterval( consent, 100 );
+          }
+        </con:entry>
+        <con:entry>function consent() {
+          document.getElementById('btn_approve').click();
+          }
+
+          if ( document.getElementById('btn_approve') ) {
+          window.setInterval( consent, 100 );
+          }
+        </con:entry>
+      </con:javaScripts>
+      <con:manualAccessTokenExpirationTime/>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>Manual Code</con:name>
+      <con:accessToken>d21918b0-3d8e-4577-a094-5f471ec8b48d</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:accessTokenStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        ENTERED_MANUALLY
+      </con:accessTokenStatus>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>Implicit - No Auto</con:name>
+      <con:clientID>WI-miDash</con:clientID>
+      <con:authorizationURI>http://localhost:8088/accapi/oauth/authorize</con:authorizationURI>
+      <con:redirectURI>display-code</con:redirectURI>
+      <con:accessToken>22244134-2850-4990-82d6-e6c69da4856b</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>IMPLICIT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:accessTokenStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
+      <con:accessTokenIssuedTime>1455051789</con:accessTokenIssuedTime>
+    </con:oAuth2Profile>
+  </con:oAuth2ProfileContainer>
+  <con:sensitiveInformation/>
+</con:soapui-project>
